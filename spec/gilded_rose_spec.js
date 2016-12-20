@@ -10,7 +10,7 @@ describe("Gilded Rose", function () {
             resetItems();
         });
 
-        xit("should decrease the quality of +5 Dexterity Vest by 1 after a day", function () {
+        it("should decrease the quality of +5 Dexterity Vest by 1 after a day", function () {
             var originalQuality = items[0].quality;
 
             // Elapse a day
@@ -20,7 +20,7 @@ describe("Gilded Rose", function () {
             expect(items[0].quality).toEqual((originalQuality - 1));
         });
 
-        xit("should decrement the quality of Conjured Mana Cake by 2 once the sell-in date is below 0", function () {
+        it("should decrement the quality of Conjured Mana Cake by 2 once the sell-in date is below 0", function () {
             var originalQuality = items[5].quality;
 
             // Elapse 4 days to push the sell-in date below zero
@@ -35,7 +35,7 @@ describe("Gilded Rose", function () {
             expect(items[5].quality).toEqual(originalQuality - 5);
         });
 
-        xit("Aged Brie should increase in quality with each passing day", function () {
+        it("Aged Brie should increase in quality with each passing day", function () {
             var originalQuality = items[1].quality;
 
             // A day has passed...
@@ -45,7 +45,7 @@ describe("Gilded Rose", function () {
             expect(items[1].quality).toBeGreaterThan(originalQuality);
         });
 
-        xit("should check that Sulfuras does not decrease in quality as days pass", function () {
+        it("should check that Sulfuras does not decrease in quality as days pass", function () {
             var originalQuality = items[3].quality;
 
             // Elapse 10 days
